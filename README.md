@@ -1,4 +1,11 @@
-# vboxscripts 
+# vboxscripts
+
+## Preparation of your environment
+1. Have virtualbox and kernel extensions installed 
+ubuntu: `sudo apt install virtualbox`
+manjaro: `mhwd-kernel -li` to check your kernel version and `sudo pacman Sy virtualbox linuxXX-virtualbox-host-modules` to install virtual box and host modules where XX is you kernelversion from the command before
+
+2. Have ansible installed: `python3 -m pip install ansible`
 
 ## Preparation of the OVA
 1. Install plain Ubuntu 22.04 from ISO file.
