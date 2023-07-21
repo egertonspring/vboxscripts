@@ -3,26 +3,36 @@
 ## Preparation of your environment
 1. Have virtualbox and kernel extensions installed 
 ubuntu: `sudo apt install virtualbox`
-manjaro: `mhwd-kernel -li` to check your kernel version and `sudo pacman -Sy virtualbox linuxXX-virtualbox-host-modules` to install virtual box and host modules where XX is you kernelversion from the command before
+manjaro: `mhwd-kernel -li` to check your kernel version and `sudo pacman -Sy virtualbox linuxXX-virtualbox-host-modules` to install virtual box and host modules where XX is your kernel version from the command before.
 
 2. Have ansible installed: `python3 -m pip install ansible`
 
 ## Preparation of the OVA
 1. Install plain Ubuntu 22.04 from ISO file.
+
 2. Rename the host to ubuntu22042.
+
 3. Install all the ubdates.
+
 4. install all your needed ssh public keys to the .ssh/authorized_keys
+
 5. Turn SWAP off and delete swapfile
 `swapoff -a && rm /swap.img`
+
 6. Remove the swap entry from /etc/fstab
+
 7. Add your user to the sudo group.
 `usermod -aG sudo <username>`
+
 8. Make sudo passwordless with NOPASSWD flag in the /etc/sudoers.conf
 `visudo`
 `%sudo   ALL=(ALL:ALL) NOPASSWD:ALL)`
+
 9. reboot machine
+
 10. delete history
 `cat /dev/null > .bash_history`
+
 11. `poweroff`the machine
 
 ## Export OVA
