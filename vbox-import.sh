@@ -13,6 +13,6 @@ vboxmanage modifyvm $machine --cpus 2
 vboxmanage modifyvm $machine --nic1 bridged --bridgeadapter1 wlp2s0
 vboxmanage startvm --type headless $machine
 sleep 70
-ansible all -i 'ubuntu22042,' -b -m shell -a 'hostnamectl set-hostname $machine'
+ansible all -i "ubuntu22042," -b -m shell -a "hostnamectl set-hostname $machine"
 vboxmanage controlvm $machine poweroff
 vboxmanage startvm --type headless $machine
